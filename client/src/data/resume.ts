@@ -56,9 +56,57 @@ export const resumeData: PersonalInfo = {
   ],
   projects: [
     {
-      title: "ERP Application For College",
-      date: "June 2020",
-      description: "A comprehensive College ERP system for streamlining administrative processes and improving communication between students, faculty, and administration.",
+      title: "Portfolio Website",
+      date: "March 2024",
+      description: "Modern portfolio website built with React, TypeScript, and Tailwind CSS showcasing projects and professional experience.",
+      achievements: [
+        "Implemented responsive design with dark mode",
+        "Created dynamic project showcase section",
+        "Integrated smooth animations and transitions"
+      ],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      gradient: "from-blue-400 to-indigo-500",
+      badgeColor: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+    },
+    {
+      title: "BCancer Prediction",
+      date: "February 2024",
+      description: "Machine learning model for breast cancer prediction using various classification algorithms and data analysis techniques.",
+      achievements: [
+        "Achieved 95% prediction accuracy",
+        "Implemented multiple ML algorithms",
+        "Created visualization dashboard"
+      ],
+      technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
+      gradient: "from-pink-400 to-red-500",
+      badgeColor: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200"
+    },
+    {
+      title: "DataVisionAI",
+      date: "January 2024",
+      description: "AI-powered data visualization and analysis tool for extracting insights from complex datasets.",
+      achievements: [
+        "Developed interactive visualizations",
+        "Integrated machine learning models",
+        "Created automated report generation"
+      ],
+      technologies: ["Python", "TensorFlow", "D3.js", "Flask"],
+      gradient: "from-purple-400 to-indigo-500",
+      badgeColor: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+    },
+    {
+      title: "ERP Application",
+      date: "June 2023",
+      description: "Comprehensive ERP system with modules for student management, attendance tracking, and academic performance monitoring.",
+      achievements: [
+        "Implemented real-time attendance tracking",
+        "Created dashboard for performance analytics",
+        "Integrated automated reporting system"
+      ],
+      technologies: ["Java", "Spring Boot", "MySQL", "React"],
+      gradient: "from-green-400 to-blue-500",
+      badgeColor: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+    }
       achievements: [
         "Enhanced operational efficiency by implementing real-time student attendance monitoring",
         "Automated record maintenance, leading to efficient administrative processes",

@@ -29,7 +29,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
-  base: '/portfolio/', // Set this to your repository name
+  base: '/portfolio', // Set this to your repository name
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,

@@ -2,7 +2,6 @@
 
 A modern, responsive portfolio website showcasing my professional experience, projects, and skills. Built with React, TypeScript, and Tailwind CSS.
 
-![Portfolio Preview](attached_assets/ChatGPT%20Image%20Mar%2028%2C%202025%2C%2012_18_42%20AM.png)
 
 ## 🚀 Features
 
@@ -40,7 +39,7 @@ A modern, responsive portfolio website showcasing my professional experience, pr
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/atty57/portfolio.git
+   git clone https://github.com/username/portfolio.git
    cd portfolio
    ```
 
@@ -64,7 +63,7 @@ To host this portfolio on GitHub Pages, follow these steps:
    Add the following to your package.json file:
    ```json
    {
-     "homepage": "https://atty57.github.io/portfolio",
+     "homepage": "https://username.github.io/portfolio",
      "scripts": {
        // existing scripts...
        "predeploy": "npm run build",
@@ -103,12 +102,5 @@ To host this portfolio on GitHub Pages, follow these steps:
    - Select the `gh-pages` branch as the source
    - Save the changes
 
-Your portfolio should now be live at `https://atty57.github.io/portfolio`!
+Your portfolio should now be live at `https://username.github.io/portfolio`!
 
-## 🤝 Contact
-
-Feel free to reach out if you have any questions or would like to connect:
-
-- **Email**: [atharvavichare57@gmail.com](mailto:atharvavichare57@gmail.com)
-- **LinkedIn**: [linkedin.com/in/atharva-vichare-68739a213](https://www.linkedin.com/in/atharva-vichare-68739a213/)
-- **GitHub**: [github.com/atty57](https://github.com/atty57)

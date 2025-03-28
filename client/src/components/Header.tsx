@@ -1,5 +1,12 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
+import { useState } from 'react';
+
+const menuItems = [
+  { href: '#home', label: 'Home' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
+];
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,19 +19,13 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
-  const menuItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contact", label: "Contact" }
-  ];
-
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-40 transition-colors duration-200">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#home" className="text-xl font-bold tracking-tight text-primary dark:text-blue-400">
+    <header className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md border-b border-border/40 z-40 transition-all duration-200">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a 
+          href="#home" 
+          className="text-xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+        >
           AV.
         </a>
         
@@ -35,10 +36,13 @@ export default function Header() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-blue-400 transition"
+                  className="relative text-muted-foreground hover:text-foreground transition-colors duration-200 py-2"
                   onClick={closeMobileMenu}
                 >
-                  {item.label}
+                  <span className="relative">
+                    {item.label}
+                    <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-primary scale-x-0 transition-transform duration-200 origin-left hover:scale-x-100" />
+                  </span>
                 </a>
               </li>
             ))}
@@ -47,7 +51,7 @@ export default function Header() {
         
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none"
+          className="md:hidden text-foreground focus:outline-none"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
@@ -62,43 +66,34 @@ export default function Header() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
+              d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
             />
           </svg>
         </button>
-      </div>
-      
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            className="md:hidden bg-white dark:bg-gray-800 transition-all duration-300 ease-in-out"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <ul className="px-4 py-2 space-y-3">
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border/40 transition-all duration-300 ${
+            isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
+          }`}
+        >
+          <nav className="container mx-auto px-4 py-4">
+            <ul className="space-y-4">
               {menuItems.map((item) => (
-                <motion.li
-                  key={item.href}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <li key={item.href}>
                   <a
                     href={item.href}
-                    className="block py-2 text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-blue-400 transition"
+                    className="block text-muted-foreground hover:text-foreground transition-colors duration-200"
                     onClick={closeMobileMenu}
                   >
                     {item.label}
                   </a>
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Single Page App for GitHub Pages
+    // https://github.com/rafgraph/spa-github-pages
+    // This script takes the current URL and converts the path and query
+    // string into a single parameter and redirects to the main HTML file.
+    // If deployed in a folder, use: location.pathname.split('/')[1] === 'portfolio' ? '/portfolio/' : '/'
+    // If deployed to the root domain, use: '/'
+    var segmentCount = 1;
+    var l = window.location;
+    var repo = 'portfolio'; // Replace with your repo name
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      '/' + repo + '/' +
+      (l.pathname.indexOf('/' + repo + '/') === 0
+        ? l.pathname.slice(('/' + repo + '/').length)
+        : '') +
+      (l.search ? '?' + l.search : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+  <p>If you are not redirected automatically, <a href="https://atty57.github.io/portfolio">click here</a>.</p>
+</body>
+</html>

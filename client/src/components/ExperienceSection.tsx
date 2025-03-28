@@ -3,21 +3,7 @@ import { useState, useEffect } from "react";
 import { resumeData } from "../data/resume";
 
 export default function ExperienceSection() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
   
-  useEffect(() => {
-    const handleChange = () => {
-      const isDark = document.documentElement.classList.contains("dark");
-      setTheme(isDark ? "dark" : "light");
-    };
-    
-    // Initialize theme
-    handleChange();
-    
-    // Listen for theme changes
-    window.addEventListener("storage", handleChange);
-    return () => window.removeEventListener("storage", handleChange);
-  }, []);
   
   const experienceData = resumeData.experience;
 

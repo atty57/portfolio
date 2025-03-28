@@ -18,10 +18,10 @@ export default function SkillsSection() {
   };
 
   const experienceLevels = [
-    { name: "Web Development", percentage: 85, color: "bg-blue-600" },
-    { name: "Machine Learning", percentage: 75, color: "bg-purple-600" },
-    { name: "Backend Development", percentage: 90, color: "bg-green-600" },
-    { name: "Big Data Analysis", percentage: 70, color: "bg-red-600" }
+    { name: "Web Development", percentage: 85, color: "bg-blue-600", gradient: "from-blue-500 to-blue-700" },
+    { name: "Machine Learning", percentage: 75, color: "bg-purple-600", gradient: "from-purple-500 to-purple-700" },
+    { name: "Backend Development", percentage: 90, color: "bg-green-600", gradient: "from-green-500 to-green-700" },
+    { name: "Big Data Analysis", percentage: 70, color: "bg-red-600", gradient: "from-red-500 to-red-700" }
   ];
 
   const fadeInUp = {
@@ -58,7 +58,7 @@ export default function SkillsSection() {
         >
           Technical Skills
         </motion.h2>
-        
+
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div 
@@ -77,7 +77,7 @@ export default function SkillsSection() {
                 {renderSkillBadges(skills.programmingLanguages, "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200")}
               </div>
             </motion.div>
-            
+
             <motion.div 
               className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6"
               initial="hidden"
@@ -94,7 +94,7 @@ export default function SkillsSection() {
                 {renderSkillBadges(skills.frameworks, "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200")}
               </div>
             </motion.div>
-            
+
             <motion.div 
               className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6"
               initial="hidden"
@@ -111,7 +111,7 @@ export default function SkillsSection() {
                 {renderSkillBadges(skills.developerTools, "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200")}
               </div>
             </motion.div>
-            
+
             <motion.div 
               className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6"
               initial="hidden"
@@ -129,7 +129,7 @@ export default function SkillsSection() {
               </div>
             </motion.div>
           </div>
-          
+
           <motion.div 
             className="mt-16 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
             initial="hidden"
@@ -145,22 +145,23 @@ export default function SkillsSection() {
                 {experienceLevels.map((skill, index) => (
                   <motion.div 
                     key={index}
-                    initial={{ opacity: 0, width: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                    transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                    className="bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10"
                   >
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{skill.percentage}%</span>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-200">{skill.name}</span>
+                      <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{skill.percentage}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div className="w-full bg-gray-200/20 rounded-full h-3 backdrop-blur-sm">
                       <motion.div 
-                        className={`${skill.color} h-2.5 rounded-full`} 
+                        className={`h-3 rounded-full bg-gradient-to-r ${skill.gradient}`}
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.percentage}%` }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                        transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
                       />
                     </div>
                   </motion.div>

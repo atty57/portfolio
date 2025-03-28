@@ -24,7 +24,7 @@ export const resumeData: PersonalInfo = {
       title: "Graduate Research Assistant (HCI LAB)",
       company: "University Of Delaware",
       location: "Newark, DE",
-      period: "September 2023 - Present",
+      period: "Sep 2023 - Present",
       responsibilities: [
         "Exploring the application of Large Language Models (LLMs), Knowledge Graphs (KGs), and Retrieval-Augmented Generation Systems (RAGs) to healthcare, with a focus on Alzheimer's disease.",
         "Developing a VR simulation for the USDA to model humane chicken depopulation methods and support animal welfare research."

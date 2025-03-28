@@ -58,50 +58,41 @@ A modern, responsive portfolio website showcasing my professional experience, pr
 
 ## 🌐 Hosting on GitHub Pages
 
-To host this portfolio on GitHub Pages, follow these steps:
+This portfolio is configured with **automatic deployment** to GitHub Pages! When you push changes to your GitHub repository, your website will be automatically built and deployed.
 
-1. **Modify package.json**:
-   Add the following to your package.json file:
-   ```json
-   {
-     "homepage": "https://atty57.github.io/portfolio",
-     "scripts": {
-       // existing scripts...
-       "predeploy": "npm run build",
-       "deploy": "gh-pages -d dist/public"
-     }
-   }
-   ```
+### Automatic Deployment (Recommended)
 
-2. **Install GitHub Pages package**:
+1. **Create a GitHub repository** named `portfolio`:
+   - Go to GitHub and create a new repository
+
+2. **Push your code to the repository**:
    ```bash
-   npm install --save-dev gh-pages
+   git remote add origin https://github.com/atty57/portfolio.git
+   git branch -M main
+   git push -u origin main
    ```
 
-3. **Update vite.config.ts** (if needed):
-   If you're deploying to a subdirectory (like `/portfolio`), set the base path in vite.config.ts:
-   ```typescript
-   export default defineConfig({
-     // other config...
-     base: '/portfolio/',
-     // rest of config...
-   });
-   ```
+3. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Navigate to Pages section
+   - Under "Build and deployment", select "GitHub Actions" as the source
+   - Your site will be automatically deployed!
 
-4. **Create a GitHub repository**:
-   - Create a new repository on GitHub named `portfolio`
-   - Commit your project to this repository
+That's it! The GitHub Actions workflow will handle everything for you. Your portfolio will be published at `https://atty57.github.io/portfolio` within a few minutes.
 
-5. **Deploy to GitHub Pages**:
+### Manual Deployment (Alternative)
+
+If you prefer to deploy manually, you can use the included scripts:
+
+1. **Using the deployment script**:
    ```bash
-   npm run deploy
+   node github-pages-deploy.js
    ```
 
-6. **Configure GitHub Pages**:
-   - Go to your GitHub repository settings
-   - Scroll down to the GitHub Pages section
-   - Select the `gh-pages` branch as the source
-   - Save the changes
+2. **Or using the shell script**:
+   ```bash
+   ./deploy-to-github.sh
+   ```
 
 Your portfolio should now be live at `https://atty57.github.io/portfolio`!
 

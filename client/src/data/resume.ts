@@ -106,15 +106,6 @@ export const resumeData: PersonalInfo = {
       technologies: ["Java", "Spring Boot", "MySQL", "React"],
       gradient: "from-green-400 to-blue-500",
       badgeColor: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
-    }
-      achievements: [
-        "Enhanced operational efficiency by implementing real-time student attendance monitoring",
-        "Automated record maintenance, leading to efficient administrative processes",
-        "Improved communication through integrated systems"
-      ],
-      technologies: ["Java", "SQL", "HTML/CSS", "JavaScript"],
-      gradient: "from-blue-400 to-indigo-500",
-      badgeColor: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
     },
     {
       title: "CPU Scheduling with Deep Reinforcement Learning",

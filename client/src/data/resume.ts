@@ -24,7 +24,7 @@ export const resumeData: PersonalInfo = {
       title: "Graduate Research Assistant (HCI LAB)",
       company: "University Of Delaware",
       location: "Newark, DE",
-      period: "September 2024 - Present",
+      period: "September 2023 - Present",
       responsibilities: [
         "Exploring the application of Large Language Models (LLMs), Knowledge Graphs (KGs), and Retrieval-Augmented Generation Systems (RAGs) to healthcare, with a focus on Alzheimer's disease.",
         "Developing a VR simulation for the USDA to model humane chicken depopulation methods and support animal welfare research."
@@ -34,7 +34,7 @@ export const resumeData: PersonalInfo = {
       title: "Student Assistant For Joseph Brickley (Instructor)",
       company: "University Of Delaware",
       location: "Newark, DE",
-      period: "March 2024 - Present",
+      period: "March 2023 - Present",
       responsibilities: [
         "Co-Developed \"Nessus Parser\", a Python package designed to automate the scanning and reporting of Common Vulnerabilities and Exposures (CVE) and Common Platform Enumerations (CPE) using data from the NIST DB.",
         "Implemented advanced data parsing algorithms, which increased the efficiency of vulnerability analysis by 40 percent, significantly reducing the time required to identify and address security threats.",
@@ -70,7 +70,7 @@ export const resumeData: PersonalInfo = {
     },
     {
       title: "CPU Scheduling with Deep Reinforcement Learning",
-      date: "May 2024",
+      date: "May 2023",
       description: "An innovative CPU scheduling algorithm developed using Proximal Policy Optimization (PPO) to enhance system performance and efficiency.",
       achievements: [
         "Enhanced scheduling efficiency by 35% compared to traditional algorithms",
@@ -83,7 +83,7 @@ export const resumeData: PersonalInfo = {
     },
     {
       title: "Nessus Parser - CVE & CPE Automation Tool",
-      date: "March 2024 - Present",
+      date: "March 2023 - Present",
       description: "Python package for automating the scanning and reporting of Common Vulnerabilities and Exposures (CVE) and Common Platform Enumerations (CPE) using NIST database.",
       features: [
         "Advanced data parsing algorithms for vulnerability analysis",

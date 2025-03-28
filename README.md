@@ -63,7 +63,7 @@ To host this portfolio on GitHub Pages, follow these steps:
    Add the following to your package.json file:
    ```json
    {
-     "homepage": "https://username.github.io/portfolio",
+     "homepage": "https://atty57.github.io/portfolio",
      "scripts": {
        // existing scripts...
        "predeploy": "npm run build",
@@ -102,5 +102,5 @@ To host this portfolio on GitHub Pages, follow these steps:
    - Select the `gh-pages` branch as the source
    - Save the changes
 
-Your portfolio should now be live at `https://username.github.io/portfolio`!
+Your portfolio should now be live at `https://atty57.github.io/portfolio`!
 

@@ -32,6 +32,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     
     // Check if the file exists
     if (fs.existsSync(resumePath)) {
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', 'attachment; filename=Atharva_Vichare_Resume.pdf');
       res.sendFile(resumePath);
     } else {
       res.status(404).json({

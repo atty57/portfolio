@@ -5,7 +5,7 @@ import avatarImage from "@assets/ChatGPT Image Mar 28, 2025, 12_18_42 AM.png";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="min-h-screen flex items-center py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-200">
+    <section id="home" className="min-h-screen flex items-center py-20">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <motion.div 

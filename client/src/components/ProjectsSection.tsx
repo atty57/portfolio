@@ -72,12 +72,12 @@ export default function ProjectsSection() {
         >
           Projects
         </motion.h2>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {projects.slice(0, 2).map((project, index) => (
             <motion.div 
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700"
+              className="glass-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 hover-lift"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -115,9 +115,9 @@ export default function ProjectsSection() {
               </div>
             </motion.div>
           ))}
-          
+
           <motion.div 
-            className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 md:col-span-2"
+            className="glass-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 md:col-span-2 hover-lift"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -167,7 +167,7 @@ export default function ProjectsSection() {
             </div>
           </motion.div>
         </div>
-        
+
         <motion.div 
           className="text-center mt-12"
           initial="hidden"

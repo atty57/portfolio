@@ -10,9 +10,9 @@ export default function ContactSection() {
     subject: "",
     message: ""
   });
-  
+
   const [formSubmitted, setFormSubmitted] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState(prev => ({
@@ -20,7 +20,7 @@ export default function ContactSection() {
       [name]: value
     }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real implementation, we would send the form data to a backend
@@ -32,23 +32,23 @@ export default function ContactSection() {
       subject: "",
       message: ""
     });
-    
+
     // Reset the form after 5 seconds
     setTimeout(() => {
       setFormSubmitted(false);
     }, 5000);
   };
-  
+
   const fadeInUp = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 }
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200">
+    <section id="contact" className="py-20 bg-gradient-to-r from-sky-500 to-indigo-500 dark:from-gray-800 dark:to-gray-900 transition-colors duration-200"> {/* Added gradient background */}
       <div className="container mx-auto px-4 md:px-8">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-12 text-center font-sans"
+          className="text-3xl md:text-4xl font-bold mb-12 text-center font-sans text-white" {/* Added text-white for better contrast */}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -57,11 +57,11 @@ export default function ContactSection() {
         >
           Get in Touch
         </motion.h2>
-        
+
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
           <div className="space-y-8">
             <motion.div 
-              className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md"
+              className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md backdrop-blur-lg bg-opacity-50 border border-gray-200 dark:border-gray-600" {/* Added glassmorphism effect */}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -93,9 +93,9 @@ export default function ContactSection() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div 
-              className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md"
+              className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md backdrop-blur-lg bg-opacity-50 border border-gray-200 dark:border-gray-600" {/* Added glassmorphism effect */}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -119,9 +119,9 @@ export default function ContactSection() {
               </div>
             </motion.div>
           </div>
-          
+
           <motion.div 
-            className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md"
+            className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md backdrop-blur-lg bg-opacity-50 border border-gray-200 dark:border-gray-600" {/* Added glassmorphism effect */}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}

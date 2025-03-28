@@ -24,7 +24,7 @@ export const resumeData: PersonalInfo = {
       title: "Graduate Research Assistant (HCI LAB)",
       company: "University Of Delaware",
       location: "Newark, DE",
-      period: "Sep 2023 - Present",
+      period: "Oct 2024 - Present",
       responsibilities: [
         "Exploring the application of Large Language Models (LLMs), Knowledge Graphs (KGs), and Retrieval-Augmented Generation Systems (RAGs) to healthcare, with a focus on Alzheimer's disease.",
         "Developing a VR simulation for the USDA to model humane chicken depopulation methods and support animal welfare research."
@@ -34,7 +34,7 @@ export const resumeData: PersonalInfo = {
       title: "Student Assistant For Joseph Brickley (Instructor)",
       company: "University Of Delaware",
       location: "Newark, DE",
-      period: "March 2023 - Present",
+      period: "Mar 2024 - Present",
       responsibilities: [
         "Co-Developed \"Nessus Parser\", a Python package designed to automate the scanning and reporting of Common Vulnerabilities and Exposures (CVE) and Common Platform Enumerations (CPE) using data from the NIST DB.",
         "Implemented advanced data parsing algorithms, which increased the efficiency of vulnerability analysis by 40 percent, significantly reducing the time required to identify and address security threats.",

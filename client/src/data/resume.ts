@@ -138,6 +138,32 @@ export const resumeData: PersonalInfo = {
       gradient: "from-purple-400 to-pink-500",
       badgeColor: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
       github: "https://github.com/atty57"
+    },
+    {
+      title: "Smart Home Automation System",
+      date: "December 2023",
+      description: "IoT-based home automation system with mobile app control and energy monitoring capabilities.",
+      achievements: [
+        "Implemented real-time device control and monitoring",
+        "Reduced energy consumption by 25% through smart scheduling",
+        "Integrated multiple IoT protocols for device compatibility"
+      ],
+      technologies: ["React Native", "Node.js", "MongoDB", "MQTT", "IoT Protocols"],
+      gradient: "from-yellow-400 to-orange-500",
+      badgeColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+    },
+    {
+      title: "Secure File Sharing Platform",
+      date: "November 2023",
+      description: "End-to-end encrypted file sharing platform with granular access control and audit logging.",
+      achievements: [
+        "Implemented end-to-end encryption using AES-256",
+        "Created role-based access control system",
+        "Developed comprehensive audit logging system"
+      ],
+      technologies: ["Go", "React", "PostgreSQL", "Docker", "Redis"],
+      gradient: "from-teal-400 to-emerald-500",
+      badgeColor: "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200"
     }
   ],
   skills: {

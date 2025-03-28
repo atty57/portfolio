@@ -98,7 +98,7 @@ export const resumeData: PersonalInfo = {
       technologies: ["Python", "NIST Database", "API Integration", "Cybersecurity"],
       gradient: "from-purple-400 to-pink-500",
       badgeColor: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-      github: "https://github.com/atharva-udel"
+      github: "https://github.com/atty57"
     }
   ],
   skills: {
@@ -121,9 +121,9 @@ export const resumeData: PersonalInfo = {
     location: "Newark, Delaware, USA"
   },
   social: {
-    github: "https://github.com/atharva",
+    github: "https://github.com/atty57",
     githubSchool: "https://github.com/atharva-udel",
-    linkedin: "https://linkedin.com/in/atharva",
+    linkedin: "https://www.linkedin.com/in/atharva-vichare-68739a213/",
     email: "mailto:atharvavichare57@gmail.com"
   }
 };

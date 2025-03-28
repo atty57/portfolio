@@ -44,7 +44,7 @@ export default function HeroSection() {
             </div>
             <div className="flex space-x-4 pt-2">
               <motion.a 
-                href="https://github.com/atharva" 
+                href="https://github.com/atty57" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition"
@@ -55,7 +55,7 @@ export default function HeroSection() {
                 <span className="sr-only">GitHub</span>
               </motion.a>
               <motion.a 
-                href="https://www.linkedin.com/in/atharva/" 
+                href="https://www.linkedin.com/in/atharva-vichare-68739a213/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition"

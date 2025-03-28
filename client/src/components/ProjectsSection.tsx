@@ -50,7 +50,7 @@ export default function ProjectsSection() {
       icon: <HiOutlineCode className="h-20 w-20 text-white" />,
       gradient: "from-purple-400 to-pink-500",
       badgeColor: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-      github: "https://github.com/atharva-udel"
+      github: "https://github.com/atty57"
     }
   ];
 
@@ -177,7 +177,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <a 
-            href="https://github.com/atharva" 
+            href="https://github.com/atty57" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white rounded-lg transition shadow-md hover:shadow-lg"

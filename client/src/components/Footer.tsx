@@ -20,7 +20,7 @@ export default function Footer() {
           <p className="text-gray-400 mb-6">© {currentYear} Atharva Vichare. All rights reserved.</p>
           <div className="flex justify-center space-x-6 mb-6">
             <motion.a 
-              href="https://github.com/atharva" 
+              href="https://github.com/atty57" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition"
@@ -31,7 +31,7 @@ export default function Footer() {
               <span className="sr-only">GitHub</span>
             </motion.a>
             <motion.a 
-              href="https://linkedin.com/in/atharva" 
+              href="https://www.linkedin.com/in/atharva-vichare-68739a213/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition"

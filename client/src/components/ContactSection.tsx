@@ -104,13 +104,13 @@ export default function ContactSection() {
             >
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Professional Profiles</h3>
               <div className="flex flex-col space-y-4">
-                <a href="https://linkedin.com/in/atharva" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition">
+                <a href="https://www.linkedin.com/in/atharva-vichare-68739a213/" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition">
                   <FaLinkedin className="h-6 w-6 mr-3" />
-                  LinkedIn: linkedin.com/in/atharva
+                  LinkedIn: linkedin.com/in/atharva-vichare-68739a213
                 </a>
-                <a href="https://github.com/atharva" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition">
+                <a href="https://github.com/atty57" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition">
                   <FaGithub className="h-6 w-6 mr-3" />
-                  GitHub: github.com/atharva
+                  GitHub: github.com/atty57
                 </a>
                 <a href="https://github.com/atharva-udel" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition">
                   <FaGithub className="h-6 w-6 mr-3" />

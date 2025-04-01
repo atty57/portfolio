@@ -55,43 +55,4 @@ A modern, responsive portfolio website showcasing my professional experience, pr
 
 4. Open your browser and visit `http://localhost:5000`
 
-## 🌐 Hosting on GitHub Pages
-
-This portfolio is configured with **automatic deployment** to GitHub Pages! When you push changes to your GitHub repository, your website will be automatically built and deployed.
-
-### Automatic Deployment (Recommended)
-
-1. **Create a GitHub repository** named `portfolio`:
-   - Go to GitHub and create a new repository
-
-2. **Push your code to the repository**:
-   ```bash
-   git remote add origin https://github.com/atty57/portfolio.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages**:
-   - Go to your repository settings
-   - Navigate to Pages section
-   - Under "Build and deployment", select "GitHub Actions" as the source
-   - Your site will be automatically deployed!
-
-That's it! The GitHub Actions workflow will handle everything for you. Your portfolio will be published at `https://atty57.github.io/portfolio` within a few minutes.
-
-### Manual Deployment (Alternative)
-
-If you prefer to deploy manually, you can use the included scripts:
-
-1. **Using the deployment script**:
-   ```bash
-   node github-pages-deploy.js
-   ```
-
-2. **Or using the shell script**:
-   ```bash
-   ./deploy-to-github.sh
-   ```
-
-Your portfolio should now be live at `https://atty57.github.io/portfolio`!
 

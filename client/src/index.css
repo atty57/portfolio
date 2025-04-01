@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply border border-gray-200;
+    @apply border-border;
   }
 
   @keyframes gradient {

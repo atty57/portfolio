@@ -110,7 +110,7 @@ export default function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex justify-end">
-                  <a href="#" className="text-primary dark:text-blue-400 hover:underline font-medium">View Details →</a>
+                  <a href="https://github.com/atty57" className="text-primary dark:text-blue-400 hover:underline font-medium">View Details →</a>
                 </div>
               </div>
             </motion.div>

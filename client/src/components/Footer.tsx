@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
           <div className="flex justify-center">
             <motion.a 
-              href="/resume.pdf" 
+              href="https://drive.google.com/file/d/1jByT-ipDdaHAJaxsvqFwlE_wAWLfM6h5/view?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 transition"

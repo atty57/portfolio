@@ -33,7 +33,7 @@ export default function HeroSection() {
                 Contact Me
               </motion.a>
               <motion.a 
-                href="/resume.pdf" 
+                href="https://drive.google.com/file/d/1jByT-ipDdaHAJaxsvqFwlE_wAWLfM6h5/view?usp=sharing" 
                 target="_blank" 
                 className="px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-600 font-medium rounded-lg transition shadow-md hover:shadow-lg"
                 whileHover={{ scale: 1.05 }}

@@ -39,8 +39,8 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-  width: 100px;
-  height: 50px;
+  width: 70px; /* reduced from 100px */
+  height: 35px; /* reduced from 50px */
   overflow: hidden;
   vertical-align: middle;
   border-radius: 9999px;
@@ -51,10 +51,10 @@
 .toggle-button {
   position: absolute;
   display: inline-block;
-  top: 4px; /* Adjusted from 3.5px to 4px for better vertical centering */
-  left: 4px; /* Adjusted from 3px to 4px for better spacing */
-  width: 42px; /* Slightly reduced from 43px for better fit */
-  height: 42px; /* Slightly reduced from 43px for better fit */
+  top: 2.5px; /* adjusted for new size */
+  left: 2.5px; /* adjusted for new size */
+  width: 28px; /* reduced from 42px */
+  height: 28px; /* reduced from 42px */
   overflow: hidden;
   transition: all 500ms ease-out;
   background: #ffffff;
@@ -66,7 +66,7 @@
 }
 
 #theme-toggle:checked + .toggle .toggle-button {
-  transform: translateX(46px); /* Adjusted from 50px to 46px to account for the new left spacing */
+  transform: translateX(33px); /* adjusted for new width */
   background: #f8fafc;
   box-shadow: 0 2px 8px 0 rgba(251, 191, 36, 0.15);
 }
@@ -105,52 +105,52 @@
 
 .crater-1 {
   background: #FFFFF9;
-  width: 43px;
-  height: 43px;
-  left: 5px;
-  bottom: 5px;
+  width: 28px; /* reduced from 43px */
+  height: 28px; /* reduced from 43px */
+  left: 2.5px;
+  bottom: 2.5px;
 }
 
 .crater-2 {
-  width: 10px;
-  height: 10px;
-  top: -3.5px;
-  left: 22px;
+  width: 6px; /* reduced from 10px */
+  height: 6px; /* reduced from 10px */
+  top: -2px;
+  left: 14px;
 }
 
 .crater-3 {
-  width: 8px;
-  height: 8px;
-  top: 10px;
-  right: -2px;
+  width: 5px; /* reduced from 8px */
+  height: 5px; /* reduced from 8px */
+  top: 6px;
+  right: -1px;
 }
 
 .crater-4 {
-  width: 5px;
-  height: 5px;
-  top: 12px;
-  left: 15px;
+  width: 3px; /* reduced from 5px */
+  height: 3px; /* reduced from 5px */
+  top: 8px;
+  left: 9px;
 }
 
 .crater-5 {
-  width: 7.5px;
-  height: 7.5px;
-  top: 20px;
-  left: 24px;
+  width: 2px; /* reduced from 4px */
+  height: 2px; /* reduced from 4px */
+  top: 16px;
+  left: 18px;
 }
 
 .crater-6 {
-  width: 5px;
-  height: 5px;
-  top: 24px;
-  left: 10px;
+  width: 2px; /* reduced from 4px */
+  height: 2px; /* reduced from 4px */
+  top: 18px;
+  left: 6px;
 }
 
 .crater-7 {
-  width: 6px;
-  height: 6px;
-  bottom: 2.5px;
-  left: 17.5px;
+  width: 2px; /* reduced from 4px */
+  height: 2px; /* reduced from 4px */
+  top: 20px;
+  left: 22px;
 }
 
 .star {
@@ -161,42 +161,42 @@
 }
 
 .star-1 {
-  width: 3px;
-  height: 3px;
-  right: 45px;
-  bottom: 20px;
+  width: 12px; /* reduced from 20px */
+  height: 3px; /* reduced from 5px */
+  right: 10px;
+  bottom: 3px;
 }
 
 .star-2 {
   width: 4px;
   height: 4px;
-  right: 35px;
-  top: 5px;
+  right: 18px;
+  bottom: 7px;
 }
 
 .star-3 {
-  width: 2.5px;
-  height: 2.5px;
-  right: 30px;
-  bottom: 7.5px;
+  width: 5px;
+  height: 5px;
+  right: 14px;
+  bottom: 10px;
 }
 
 .star-4 {
-  width: 1.5px;
-  height: 1.5px;
-  right: 20px;
-  bottom: 25px;
+  width: 1px;
+  height: 1px;
+  right: 8px;
+  bottom: 12px;
 }
 
 .star-5 {
-  width: 2px;
-  height: 2px;
-  right: 5px;
-  bottom: 17.5px;
+  width: 1.5px;
+  height: 1.5px;
+  right: 3px;
+  bottom: 7px;
 }
 
 .star-6, .star-7, .star-8 {
-  width: 5px;
+  width: 3px;
   height: 1px;
   transform: rotate(-45deg);
   box-shadow: 2.5px 0px 2px 0.5px #FFF;
@@ -207,19 +207,20 @@
 }
 
 .star-6 {
-  right: 15px;
-  bottom: 15px;
+  right: 7px;
+  bottom: 8px;
   animation-delay: -2s;
 }
 
 .star-7 {
-  right: 25px;
-  bottom: 30px;
+  right: 13px;
+  bottom: 15px;
+  animation-delay: -3s;
 }
 
 .star-8 {
-  right: 45px;
-  top: 5px;
+  right: 22px;
+  top: 3px;
   animation-delay: -4s;
 }
 

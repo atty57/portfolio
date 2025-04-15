@@ -33,3 +33,315 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 }
+
+/* Make toggle rounded and match overall theme */
+.toggle {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #0ea5e9 0%, #6366f1 100%);
+  box-shadow: 0 2px 12px 0 rgba(14, 165, 233, 0.15);
+}
+
+.toggle-button {
+  position: absolute;
+  display: inline-block;
+  top: 4px; /* Adjusted from 3.5px to 4px for better vertical centering */
+  left: 4px; /* Adjusted from 3px to 4px for better spacing */
+  width: 42px; /* Slightly reduced from 43px for better fit */
+  height: 42px; /* Slightly reduced from 43px for better fit */
+  overflow: hidden;
+  transition: all 500ms ease-out;
+  background: #ffffff;
+  border-radius: 9999px; /* Ensure button is perfectly round */
+}
+
+#theme-toggle:checked + .toggle {
+  background: linear-gradient(90deg, #fbbf24 0%, #f472b6 100%); /* Tailwind yellow to pink */
+}
+
+#theme-toggle:checked + .toggle .toggle-button {
+  transform: translateX(46px); /* Adjusted from 50px to 46px to account for the new left spacing */
+  background: #f8fafc;
+  box-shadow: 0 2px 8px 0 rgba(251, 191, 36, 0.15);
+}
+
+.crater, .crater-1 {
+  border-radius: 9999px !important;
+}
+
+.star, #theme-toggle:checked + .toggle .star {
+  border-radius: 9999px !important;
+}
+
+/* Remove pixelated rendering for a smoother look */
+* {
+  image-rendering: auto;
+}
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+#theme-toggle {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.crater {
+  position: absolute;
+  display: inline-block;
+  background: #FAEAF1;
+  transition: 500ms;
+}
+
+.crater-1 {
+  background: #FFFFF9;
+  width: 43px;
+  height: 43px;
+  left: 5px;
+  bottom: 5px;
+}
+
+.crater-2 {
+  width: 10px;
+  height: 10px;
+  top: -3.5px;
+  left: 22px;
+}
+
+.crater-3 {
+  width: 8px;
+  height: 8px;
+  top: 10px;
+  right: -2px;
+}
+
+.crater-4 {
+  width: 5px;
+  height: 5px;
+  top: 12px;
+  left: 15px;
+}
+
+.crater-5 {
+  width: 7.5px;
+  height: 7.5px;
+  top: 20px;
+  left: 24px;
+}
+
+.crater-6 {
+  width: 5px;
+  height: 5px;
+  top: 24px;
+  left: 10px;
+}
+
+.crater-7 {
+  width: 6px;
+  height: 6px;
+  bottom: 2.5px;
+  left: 17.5px;
+}
+
+.star {
+  position: absolute;
+  display: inline-block;
+  background: #FFF;
+  box-shadow: 1px 0 2px 2px rgba(255, 255, 255);
+}
+
+.star-1 {
+  width: 3px;
+  height: 3px;
+  right: 45px;
+  bottom: 20px;
+}
+
+.star-2 {
+  width: 4px;
+  height: 4px;
+  right: 35px;
+  top: 5px;
+}
+
+.star-3 {
+  width: 2.5px;
+  height: 2.5px;
+  right: 30px;
+  bottom: 7.5px;
+}
+
+.star-4 {
+  width: 1.5px;
+  height: 1.5px;
+  right: 20px;
+  bottom: 25px;
+}
+
+.star-5 {
+  width: 2px;
+  height: 2px;
+  right: 5px;
+  bottom: 17.5px;
+}
+
+.star-6, .star-7, .star-8 {
+  width: 5px;
+  height: 1px;
+  transform: rotate(-45deg);
+  box-shadow: 2.5px 0px 2px 0.5px #FFF;
+  animation-name: travel;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.star-6 {
+  right: 15px;
+  bottom: 15px;
+  animation-delay: -2s;
+}
+
+.star-7 {
+  right: 25px;
+  bottom: 30px;
+}
+
+.star-8 {
+  right: 45px;
+  top: 5px;
+  animation-delay: -4s;
+}
+
+@keyframes travel {
+  0% {
+    transform: rotate(-45deg) translateX(35px);
+  }
+
+  50% {
+    transform: rotate(-45deg) translateX(-10px);
+    box-shadow: 2.5px 0px 3px 0.5px #FFF;
+  }
+
+  100% {
+    transform: rotate(-45deg) translateX(-15px);
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+#theme-toggle:checked + .toggle .toggle-button .crater {
+  transform: rotate(-45deg) translateX(35px);
+}
+
+#theme-toggle:checked + .toggle .star {
+  animation: move 2s infinite;
+  transform: none;
+  box-shadow: none;
+}
+
+#theme-toggle:checked + .toggle .star-1 {
+  width: 20px;
+  height: 5px;
+  background: #FFF;
+  left: 10px;
+  top: 12.5px;
+  box-shadow: none;
+}
+
+#theme-toggle:checked + .toggle .star-2 {
+  width: 6px;
+  height: 6px;
+  background: #FFF;
+  left: 13px;
+  top: 11.5px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:checked + .toggle .star-3 {
+  width: 8px;
+  height: 8px;
+  background: #FFF;
+  left: 17.5px;
+  top: 9.5px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:checked + .toggle .star-4 {
+  width: 4px;
+  height: 4px;
+  background: #FFF;
+  left: 22.5px;
+  top: 7.5px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:checked + .toggle .star-5 {
+  width: 3px;
+  height: 3px;
+  background: #FFF;
+  left: 27.5px;
+  top: 10px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:checked + .toggle .star-6 {
+  width: 2px;
+  height: 2px;
+  background: #FFF;
+  left: 32.5px;
+  top: 12.5px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:checked + .toggle .star-7 {
+  width: 1.5px;
+  height: 1.5px;
+  background: #FFF;
+  left: 37.5px;
+  top: 15px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:checked + .toggle .star-8 {
+  width: 1px;
+  height: 1px;
+  background: #FFF;
+  left: 42.5px;
+  top: 17.5px;
+  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:checked + .toggle .star-2,
+#theme-toggle:checked + .toggle .star-3,
+#theme-toggle:checked + .toggle .star-4,
+#theme-toggle:checked + .toggle .star-5,
+#theme-toggle:checked + .toggle .star-6,
+#theme-toggle:checked + .toggle .star-7,
+#theme-toggle:checked + .toggle .star-8 {
+  border-radius: 1px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(2.5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

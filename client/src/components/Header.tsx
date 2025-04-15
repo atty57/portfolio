@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,6 +45,9 @@ export default function Header() {
             ))}
           </ul>
         </nav>
+        
+        {/* Theme Toggle Button */}
+        <ThemeToggle />
         
         {/* Mobile Menu Button */}
         <button

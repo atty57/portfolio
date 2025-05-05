@@ -72,7 +72,7 @@ export default function ProjectsSection() {
       icon: <HiOutlineLightBulb className="h-20 w-20 text-white" />,
       gradient: "from-red-400 to-amber-500",
       badgeColor: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-      github: "https://github.com/atty57/virtual-medical-assistant"
+      github: "https://github.com/atty57"
     }
   ];
 

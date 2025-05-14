@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import { HiOutlineCode, HiOutlineCube, HiOutlineDesktopComputer, HiOutlineChartBar } from "react-icons/hi";
+import { 
+  SiPython, SiSharp, SiCplusplus, SiPostgresql, SiJavascript, SiHtml5, SiCss3,
+  SiReact, SiNodedotjs, SiFlask, SiWordpress, SiFastapi,
+  SiGit, SiDocker, SiJira, SiGooglecloud, SiPycharm, SiIntellijidea, SiEclipseide,
+  SiPandas, SiNumpy, SiTensorflow, SiApachespark, SiApachehive, SiApachehadoop
+} from "react-icons/si";
 
 export default function SkillsSection() {
   const skills = {
@@ -29,17 +35,59 @@ export default function SkillsSection() {
     visible: { y: 0, opacity: 1 }
   };
 
+  // Icon mapping for each skill
+  const skillIcons: Record<string, JSX.Element> = {
+    // Programming Languages
+    "Java": <span className="inline-block w-4 h-4 bg-yellow-700 rounded-full mr-1" title="Java" />, 
+    "Python": <SiPython className="inline mr-1 align-text-bottom" />, 
+    "C#": <SiSharp className="inline mr-1 align-text-bottom" />, 
+    "C++": <SiCplusplus className="inline mr-1 align-text-bottom" />, 
+    "SQL (Postgres)": <SiPostgresql className="inline mr-1 align-text-bottom" />, 
+    "JavaScript": <SiJavascript className="inline mr-1 align-text-bottom" />, 
+    "HTML/CSS": <span><SiHtml5 className="inline mr-0.5 align-text-bottom" /><SiCss3 className="inline mr-1 align-text-bottom" /></span>,
+    // Frameworks
+    "React": <SiReact className="inline mr-1 align-text-bottom" />, 
+    "Node.js": <SiNodedotjs className="inline mr-1 align-text-bottom" />, 
+    "Flask": <SiFlask className="inline mr-1 align-text-bottom" />, 
+    "WordPress": <SiWordpress className="inline mr-1 align-text-bottom" />, 
+    // Material-UI: No official icon in react-icons/si, so omit or use a generic icon if desired
+    "Material-UI": <span className="inline-block w-4 h-4 bg-blue-500 rounded mr-1" title="Material-UI" />, 
+    "FastAPI": <SiFastapi className="inline mr-1 align-text-bottom" />, 
+    // Developer Tools
+    "Git": <SiGit className="inline mr-1 align-text-bottom" />, 
+    "Docker": <SiDocker className="inline mr-1 align-text-bottom" />, 
+    "Jira": <SiJira className="inline mr-1 align-text-bottom" />, 
+    "Google Cloud Platform": <SiGooglecloud className="inline mr-1 align-text-bottom" />, 
+    // VS Code: No official icon in react-icons/si, so omit or use a generic icon if desired
+    "VS Code": <span className="inline-block w-4 h-4 bg-blue-400 rounded mr-1" title="VS Code" />, 
+    // Visual Studio: No official icon in react-icons/si, so omit or use a generic icon if desired
+    "Visual Studio": <span className="inline-block w-4 h-4 bg-purple-400 rounded mr-1" title="Visual Studio" />, 
+    "PyCharm": <SiPycharm className="inline mr-1 align-text-bottom" />, 
+    "IntelliJ": <SiIntellijidea className="inline mr-1 align-text-bottom" />, 
+    "Eclipse": <SiEclipseide className="inline mr-1 align-text-bottom" />, 
+    // Data Analysis & Libraries
+    "pandas": <SiPandas className="inline mr-1 align-text-bottom" />, 
+    "NumPy": <SiNumpy className="inline mr-1 align-text-bottom" />, 
+    // Matplotlib: No official icon in react-icons/si, so omit or use a generic icon if desired
+    "Matplotlib": <span className="inline-block w-4 h-4 bg-orange-400 rounded mr-1" title="Matplotlib" />, 
+    "TensorFlow": <SiTensorflow className="inline mr-1 align-text-bottom" />, 
+    "PySpark": <SiApachespark className="inline mr-1 align-text-bottom" />, 
+    "Apache Hive": <SiApachehive className="inline mr-1 align-text-bottom" />, 
+    "Hadoop": <SiApachehadoop className="inline mr-1 align-text-bottom" />
+  };
+
   const renderSkillBadges = (skillsList: string[], badgeColor: string) => {
     return skillsList.map((skill, index) => (
       <motion.span 
         key={index}
-        className={`skill-badge ${badgeColor} px-3 py-2 rounded-lg text-sm font-medium`}
+        className={`skill-badge ${badgeColor} px-3 py-2 rounded-lg text-sm font-medium flex items-center`}
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.3, delay: index * 0.05 }}
         whileHover={{ y: -3, boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" }}
       >
+        {skillIcons[skill] && <span className="mr-1">{skillIcons[skill]}</span>}
         {skill}
       </motion.span>
     ));

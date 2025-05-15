@@ -19,8 +19,19 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center py-20 bg-[#374151]">
-      <div className="container mx-auto px-4 md:px-8">
+    <section
+      id="home"
+      className="min-h-screen flex items-center py-20 relative overflow-hidden bg-[#374151]"
+      style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Overlay for darkening the background */}
+      <div className="absolute inset-0 bg-black/70 z-0" />
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <motion.div 
             className="md:w-1/2 space-y-6"

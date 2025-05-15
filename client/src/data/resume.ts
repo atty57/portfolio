@@ -24,10 +24,11 @@ export const resumeData: PersonalInfo = {
       title: "Graduate Research Assistant (HCI LAB)",
       company: "University Of Delaware",
       location: "Newark, DE",
-      period: "Oct 2024 - Present",
+      period: "May 2024 - Present",
       responsibilities: [
-        "Exploring the application of Large Language Models (LLMs), Knowledge Graphs (KGs), and Retrieval-Augmented Generation Systems (RAGs) to healthcare, with a focus on Alzheimer's disease.",
-        "Developing a VR simulation for the USDA to model humane chicken depopulation methods and support animal welfare research."
+        "Architecting advanced conversational AI agents for AWS avatars using LLMs, with Amazon SageMaker for model training/RL, Polly for lifelike TTS, and S3 for data management. Proficient in developing immersive VR/XR Unity simulations and Blender 3D assets. Applying Reinforcement Learning to boost AI agent decision-making and autonomous task completion in dynamic virtual environments.",
+        "Spearheading Amazon-funded development of next-generation LLMs for conversational AI.",
+        "Leading USDA-supported Unity simulations (including VR testing) for critical agricultural and environmental research applications"
       ]
     },
     {
@@ -45,7 +46,7 @@ export const resumeData: PersonalInfo = {
       title: "Associate Software Engineer",
       company: "GEP PVT. LTD",
       location: "Navi Mumbai, MH",
-      period: "June 2022 - May 2023",
+      period: "June 2022 - Mar 2023",
       responsibilities: [
         "Harnessed the .NET Framework, AngularJS, and Java to develop robust, scalable components for supply chain management software GEP Nexxe, GEP Smart, streamlining processes and boosting efficiency.",
         "Engineered dynamic user interfaces using HTML and CSS, enhancing user satisfaction and experience.",

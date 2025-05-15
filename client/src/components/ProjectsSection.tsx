@@ -181,10 +181,11 @@ export default function ProjectsSection() {
                   <span key={tIndex} className={`${projects[2].badgeColor} text-xs font-medium px-2.5 py-0.5 rounded`}>{tech}</span>
                 ))}
               </div>
-              <div className="flex justify-end">
+              <div className="flex flex-col items-end">
                 <a href={projects[2].github} target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline font-medium">
                   View on GitHub →
                 </a>
+                <span className="mt-1 text-xs text-gray-500 dark:text-gray-400 text-left">(Private repo – ask for access)</span>
               </div>
             </div>
           </motion.div>
@@ -241,10 +242,11 @@ export default function ProjectsSection() {
                   <span key={tIndex} className={`${projects[3].badgeColor} text-xs font-medium px-2.5 py-0.5 rounded`}>{tech}</span>
                 ))}
               </div>
-              <div className="flex justify-end">
+              <div className="flex flex-col items-end">
                 <a href={projects[3].github} target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline font-medium">
                   View on GitHub →
                 </a>
+                <span className="mt-1 text-xs text-gray-500 dark:text-gray-400 text-left">(Private repo – ask for access)</span>
               </div>
             </div>
           </motion.div>

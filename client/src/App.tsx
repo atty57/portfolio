@@ -13,6 +13,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useEffect } from "react";
+import Layout from "@/components/Layout";
 
 function HomePage() {
   return (
@@ -57,7 +58,9 @@ function App() {
   
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
+      <Layout>
+        <Router />
+      </Layout>
       <Toaster />
     </QueryClientProvider>
   );

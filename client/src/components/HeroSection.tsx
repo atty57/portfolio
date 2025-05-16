@@ -8,6 +8,11 @@ export default function HeroSection() {
   const fullText = "Hi, I'm Atharva Vichare";
   const [typedText, setTypedText] = useState("");
 
+  // Split the name for controlled rendering
+  const name = "Atharva Vichare";
+  const nameStartIndex = fullText.indexOf(name);
+  const nameEndIndex = nameStartIndex + name.length;
+
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
@@ -17,6 +22,30 @@ export default function HeroSection() {
     }, 60);
     return () => clearInterval(interval);
   }, []);
+
+  // Helper to render the name with <wbr>
+  function renderTypedTextWithBreak(text: string) {
+    if (text.length <= nameStartIndex) return text;
+    // If the full name is not yet fully typed, keep the whole currently-typed portion of the name in a nowrap span
+    if (text.length < nameEndIndex) {
+      return (
+        <>
+          {text.slice(0, nameStartIndex)}
+          <span style={{ whiteSpace: 'nowrap' }}>{text.slice(nameStartIndex)}</span>
+        </>
+      );
+    }
+    const firstName = 'Atharva';
+    const lastName = 'Vichare';
+    return (
+      <>
+        {text.slice(0, nameStartIndex)}
+        <span style={{ whiteSpace: 'nowrap' }}>{firstName}</span>
+        {' '}
+        <span style={{ whiteSpace: 'nowrap' }}>{lastName}</span>
+      </>
+    );
+  }
 
   return (
     <section
@@ -39,8 +68,8 @@ export default function HeroSection() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-sans min-h-[3.5rem]">
-              <span>{typedText}</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-sans min-h-[3.5rem] mobile-typewriter">
+              <span>{renderTypedTextWithBreak(typedText)}</span>
               {typedText.length < fullText.length && <span className="animate-pulse">|</span>}
             </h1>
             <p className="text-xl md:text-2xl text-gray-200">

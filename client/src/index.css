@@ -346,3 +346,15 @@
     transform: translateX(0);
   }
 }
+
+@media (max-width: 430px) {
+  .mobile-typewriter {
+    font-size: 1.7rem !important;
+    min-height: 2.5rem !important;
+    line-height: 2.2rem !important;
+    word-break: keep-all !important;
+  }
+  .mobile-typewriter span[style*='white-space: nowrap'] {
+    white-space: nowrap !important;
+  }
+}

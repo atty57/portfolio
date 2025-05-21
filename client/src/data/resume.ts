@@ -53,7 +53,17 @@ export const resumeData: PersonalInfo = {
         "Collaborated with cross-functional teams to translate client requirements into effective technical solutions, contributing to a 22 percent improvement in overall project delivery efficiency.",
         "Conducted thorough code reviews, debugging, and iterative testing, ensuring high-quality software and a 15 percent enhancement in Agile process cycles."
       ]
-    }
+    },
+    {
+      title: "Software Engineering Intern",
+      company: "MS Commercial Corporation",
+      location: "Mumbai, MH",
+      period: "Jun 2020 - Nov 2021",
+      responsibilities: [
+        "Developed a user/client website using Node.js, Java, HTML, CSS, JavaScript, and AWS, enhancing user experience and increasing site engagement.",
+        "Automated front-end testing with Jest and Selenium, cutting regression defects by 45%."
+      ]
+    },
   ],
   projects: [
     {

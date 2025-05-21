@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
+import { Button } from "@heroui/react";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -56,13 +57,15 @@ export default function Header() {
           <ul className="flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.href}>
-                <a
+                <Button
+                  as="a"
                   href={item.href}
-                  className="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-blue-400 transition"
+                  variant="light"
+                  className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition font-medium px-4 py-2 rounded-lg shadow-none hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary/50"
                   onClick={closeMobileMenu}
                 >
                   {item.label}
-                </a>
+                </Button>
               </li>
             ))}
           </ul>
@@ -112,13 +115,15 @@ export default function Header() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <a
+                    <Button
+                      as="a"
                       href={item.href}
-                      className="block py-2 text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-blue-400 transition"
+                      variant="light"
+                      className="w-full block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition font-medium rounded-lg shadow-none hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary/50 text-left"
                       onClick={closeMobileMenu}
                     >
                       {item.label}
-                    </a>
+                    </Button>
                   </motion.li>
                 ))}
               </ul>

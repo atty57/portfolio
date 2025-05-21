@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useEffect } from "react";
 import Layout from "@/components/Layout";
+import { HeroUIProvider } from "@heroui/react";
 
 function HomePage() {
   return (
@@ -58,10 +59,12 @@ function App() {
   
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout>
-        <Router />
-      </Layout>
-      <Toaster />
+      <HeroUIProvider>
+        <Layout>
+          <Router />
+        </Layout>
+        <Toaster />
+      </HeroUIProvider>
     </QueryClientProvider>
   );
 }

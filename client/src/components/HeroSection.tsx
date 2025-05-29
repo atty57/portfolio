@@ -88,7 +88,7 @@ export default function HeroSection() {
                 Contact Me
               </motion.a>
               <motion.a 
-                href="https://drive.google.com/file/d/1jByT-ipDdaHAJaxsvqFwlE_wAWLfM6h5/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1A2kpSD2APiItS1nTvYm9jJPG9LGlD8Dq/view?usp=drive_link" 
                 target="_blank" 
                 className="px-6 py-3 bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-medium rounded-lg transition shadow-md hover:shadow-lg"
                 whileHover={{ scale: 1.05 }}

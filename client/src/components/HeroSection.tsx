@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import avatarImage from "@assets/ChatGPT Image Mar 28, 2025, 12_18_42 AM.png";
 import { useState, useEffect } from "react";
@@ -119,6 +120,17 @@ export default function HeroSection() {
               >
                 <FaLinkedin className="h-7 w-7" />
                 <span className="sr-only">LinkedIn</span>
+              </motion.a>
+              <motion.a 
+                href="https://x.com/atharva1357" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-200 hover:text-white transition"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FaXTwitter className="h-7 w-7" />
+                <span className="sr-only">X (Twitter)</span>
               </motion.a>
               <motion.a 
                 href="mailto:atharvavichare57@gmail.com" 

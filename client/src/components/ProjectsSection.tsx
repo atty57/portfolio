@@ -1,9 +1,18 @@
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { HiOutlineDocument, HiOutlineDesktopComputer, HiOutlineCode, HiOutlineLightBulb } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import virtualAssistantImage from "../../../attached_assets/virtual-assistant-banner.jpg"; // Import from attached_assets folder
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function ProjectsSection() {
+  // Refs for GSAP animations
+  const sectionRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const projectsGridRef = useRef<HTMLDivElement>(null);
+  const projectCardsRef = useRef<HTMLDivElement[]>([]);
+  const githubButtonRef = useRef<HTMLDivElement>(null);
+
   const projects = [
     {
       title: "ERP Application For College",
@@ -76,36 +85,117 @@ export default function ProjectsSection() {
     }
   ];
 
-  const fadeInUp = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 }
-  };
+  useEffect(() => {
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate title
+    if (titleRef.current) {
+      gsap.fromTo(titleRef.current,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }
+
+    // Animate project cards with stagger
+    if (projectsGridRef.current) {
+      const cards = Array.from(projectsGridRef.current.children);
+      gsap.fromTo(cards,
+        { y: 60, opacity: 0, scale: 0.95 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: projectsGridRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }
+
+    // Animate GitHub button
+    if (githubButtonRef.current) {
+      gsap.fromTo(githubButtonRef.current,
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: githubButtonRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }
+
+    // Add hover animations for project cards
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+          y: -10,
+          scale: 1.02,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+          y: 0,
+          scale: 1,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+    });
+
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200">
+    <section 
+      ref={sectionRef}
+      id="projects" 
+      className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200"
+    >
       <div className="container mx-auto px-4 md:px-8">
-        <motion.h2 
+        <h2 
+          ref={titleRef}
           className="text-3xl md:text-4xl font-bold mb-12 text-center font-sans"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          transition={{ duration: 0.5 }}
         >
           Projects
-        </motion.h2>
+        </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div ref={projectsGridRef} className="grid md:grid-cols-2 gap-8">
           {projects.slice(0, 2).map((project, index) => (
-            <motion.div 
+            <div 
               key={index}
-              className="glass-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 hover-lift"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
+              className="glass-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 hover-lift transform transition-all duration-300"
             >
               <div className={`h-48 bg-gradient-to-r ${project.gradient} flex items-center justify-center`}>
                 {project.icon}
@@ -135,17 +225,11 @@ export default function ProjectsSection() {
                   <a href="https://github.com/atty57" className="text-primary dark:text-blue-400 hover:underline font-medium">View Details →</a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
 
-          <motion.div 
-            className="glass-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 md:col-span-2 hover-lift"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            whileHover={{ y: -5 }}
+          <div 
+            className="glass-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 md:col-span-2 hover-lift transform transition-all duration-300"
           >
             <div className={`h-48 bg-gradient-to-r ${projects[2].gradient} flex items-center justify-center`}>
               {projects[2].icon}
@@ -188,17 +272,11 @@ export default function ProjectsSection() {
                 <span className="mt-1 text-xs text-gray-500 dark:text-gray-400 text-left">(Private repo – ask for access)</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* New Project - Virtual Medical Assistant with Custom Image */}
-          <motion.div 
-            className="glass-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 md:col-span-2 hover-lift"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            whileHover={{ y: -5 }}
+          <div 
+            className="glass-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl project-card border border-gray-100 dark:border-gray-700 md:col-span-2 hover-lift transform transition-all duration-300"
           >
             {/* Custom banner image instead of gradient */}
             <div className="h-64 w-full overflow-hidden relative">
@@ -249,27 +327,23 @@ export default function ProjectsSection() {
                 <span className="mt-1 text-xs text-gray-500 dark:text-gray-400 text-left">(Private repo – ask for access)</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div 
+        <div 
+          ref={githubButtonRef}
           className="text-center mt-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <a 
             href="https://github.com/atty57" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white rounded-lg transition shadow-md hover:shadow-lg"
+            className="inline-flex items-center px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-white rounded-lg transition shadow-md hover:shadow-lg transform hover:scale-105 active:scale-95"
           >
             <FaGithub className="h-5 w-5 mr-2" />
             See more projects on GitHub
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

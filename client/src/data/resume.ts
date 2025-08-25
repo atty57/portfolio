@@ -2,8 +2,8 @@ import { PersonalInfo } from "../types";
 
 export const resumeData: PersonalInfo = {
   name: "Atharva Vichare",
-  title: "Graduate Research Assistant & Software Engineer",
-  description: "Focusing on LLMs, Knowledge Graphs, and developing innovative solutions in healthcare and VR technologies.",
+  title: "Machine Learning Engineer & Software Engineer",
+  description: "Specializing in machine learning, LLMs, Knowledge Graphs, and developing innovative solutions in AI technologies and software engineering.",
   available: true,
   education: [
     {
@@ -21,10 +21,22 @@ export const resumeData: PersonalInfo = {
   ],
   experience: [
     {
+      title: "Machine Learning Engineer",
+      company: "Star Communication Inc",
+      location: "Remote",
+      period: "July 2025 - Present",
+      responsibilities: [
+        "Developing and deploying machine learning models for communication and data analysis applications.",
+        "Implementing AI solutions to enhance business processes and customer experience.",
+        "Collaborating with cross-functional teams to integrate ML capabilities into existing systems.",
+        "Optimizing model performance and ensuring scalability for production environments."
+      ]
+    },
+    {
       title: "Graduate Research Assistant (HCI LAB)",
       company: "University Of Delaware",
       location: "Newark, DE",
-      period: "May 2024 - Present",
+      period: "May 2024 - July 2025",
       responsibilities: [
         "Architecting advanced conversational AI agents for AWS avatars using LLMs, with Amazon SageMaker for model training/RL, Polly for lifelike TTS, and S3 for data management. Proficient in developing immersive VR/XR Unity simulations and Blender 3D assets. Applying Reinforcement Learning to boost AI agent decision-making and autonomous task completion in dynamic virtual environments.",
         "Spearheading Amazon-funded development of next-generation LLMs for conversational AI.",
